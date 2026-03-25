@@ -1,4 +1,4 @@
-# cs333-Network-Utils-Ranzomware
+# CS333-Network-Utils-Ranzomware
 
 This repo is a collection of network utilities
 
