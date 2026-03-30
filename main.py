@@ -1,9 +1,17 @@
-def main():
-    print("Hello from cs333-network-utils-ranzomware!")
+FILE_NAME=test.bin
 
+def to_bin(var):
+    print("Write var to disk in binary format")
+
+def from_bin(file):
+    print("Reading binary file to mem")
 
 if __name__ == "__main__":
-    main()
+    print("In the main file")
+    to_bin(10)
+    from_bin()
+    var = from_bin()
+    print(var)
 
 class Packet:
     def __init__(self, source_ip, dest_ip, payload):
