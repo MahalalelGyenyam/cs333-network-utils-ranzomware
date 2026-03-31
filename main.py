@@ -17,19 +17,39 @@ FILE_NAME=test.bin
 # - Convert into to bin
 # - Write bin to file
 
+
+
+# - Read bin from file
+# - Convert bin to int
+# - Convert int to string
 def to_bin(var):
     print("Write var to disk in binary format")
+    
+    # Converts the int to 8-bit binary string
+    binary_data = format(var, '08b')  
+
     f = open("demofile.txt", "a")
     print(f.read())
+    
+    with open ("demofile.txt", "a") as f:
+        f.write(binary_data)
+    
+    print("Wrote to text file in binary format.")
 
 def from_bin(file):
     print("Reading binary file to mem")
 
 if __name__ == "__main__":
-    print("In the main file")
+    # print("In the main file")
+    # to_bin(10)
+    # from_bin()
+    # var = from_bin()
+    # print(var)
+    
+    
+    # This is how it'd look like if we were to read from a file and print the content
     to_bin(10)
-    from_bin()
-    var = from_bin()
+    var = from_bin("demofile.txt")
     print(var)
 
 class Packet:
